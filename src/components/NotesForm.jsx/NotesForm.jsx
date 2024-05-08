@@ -9,6 +9,7 @@ export default function NotesForm({ handleAddNotes }) {
     function handleSubmit(evt) {
         evt.preventDefault();
         handleAddNotes(note);
+        setNote('');
     }
 
 

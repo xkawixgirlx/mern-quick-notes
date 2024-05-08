@@ -26,13 +26,16 @@ export default function NotesListPage() {
 
   return (
     <>
-      <h1>NotesListPage</h1>
+      <h1>Notes: </h1>
       {notes.length === 0 ? (
-        <div>No Notes Yet!</div>
+        <h2>No Notes Yet!</h2>
       ) : (
         <div>
           {notes.map((note) => (
-            <div key={note._id}><p>{note.text}</p><p>{new Date(note.createdAt).toLocaleString()}</p></div>
+            <div key={note._id}>
+              <li>{note.text}</li>
+              <p>{new Date(note.createdAt).toLocaleString()}</p>
+            </div>
           ))}
         </div>
       )}
